@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kensington 16 HOA Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">K16</div>
+      <div>
+        <h1>Kensington 16</h1>
+        <p>HOA Management</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav-item active" data-section="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav-item" data-section="dues">₱ <span>Monthly Dues</span></button>
+      <button class="nav-item" data-section="announcements">! <span>Announcements</span></button>
+      <button class="nav-item" data-section="reports">▤ <span>Village Reports</span></button>
+      <button class="nav-item" data-section="incidents">⚠ <span>Disturbance & Damage</span></button>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">WEB-BASED HOA MANAGEMENT SYSTEM</p>
+        <h2 id="pageTitle">Dashboard</h2>
+      </div>
+      <div class="user-chip">
+        <div class="avatar">AD</div>
+        <div>
+          <strong>Admin</strong>
+          <span>HOA Staff</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="page-section active-section">
+      <div class="intro">
+        <div>
+          <span class="tag">Kensington 16 • Lancaster</span>
+          <h3>Good morning, Admin.</h3>
+          <p>A basic overview of homeowner activities, payments, announcements, and village concerns.</p>
+        </div>
+        <button class="primary-btn" id="addAnnouncementBtn">+ New Announcement</button>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>Registered Homeowners</span>
+          <strong>128</strong>
+          <small>Sample data</small>
+        </article>
+        <article class="stat-card">
+          <span>Monthly Dues Collected</span>
+          <strong>₱86,450</strong>
+          <small>September 2026</small>
+        </article>
+        <article class="stat-card">
+          <span>Open Reports</span>
+          <strong>7</strong>
+          <small>Needs review</small>
+        </article>
+        <article class="stat-card">
+          <span>Announcements</span>
+          <strong>4</strong>
+          <small>2 recent</small>
+        </article>
+      </div>
+
+      <div class="content-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <span class="section-label">LATEST</span>
+              <h3>Recent Village Reports</h3>
+            </div>
+            <button class="text-btn" data-section-link="reports">View all →</button>
+          </div>
+          <div class="report-list">
+            <div class="report-row">
+              <div class="report-icon">⚠</div>
+              <div><strong>Streetlight concern</strong><p>Block 4 • 2 hours ago</p></div>
+              <span class="pill pending">Pending</span>
+            </div>
+            <div class="report-row">
+              <div class="report-icon">▣</div>
+              <div><strong>Water leak near gate</strong><p>Block 2 • Yesterday</p></div>
+              <span class="pill review">Review</span>
+            </div>
+            <div class="report-row">
+              <div class="report-icon">⌂</div>
+              <div><strong>Property fence damage</strong><p>Block 7 • Sept. 20</p></div>
+              <span class="pill resolved">Resolved</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <span class="section-label">NOTICE BOARD</span>
+              <h3>Recent Announcements</h3>
+            </div>
+          </div>
+          <div class="announcement">
+            <span class="date-badge">18<br><small>SEP</small></span>
+            <div><strong>Community clean-up drive</strong><p>Saturday, 7:00 AM at the clubhouse.</p></div>
+          </div>
+          <div class="announcement">
+            <span class="date-badge">15<br><small>SEP</small></span>
+            <div><strong>Gate access reminder</strong><p>Please keep your homeowner ID available.</p></div>
+          </div>
+          <button class="outline-btn" id="announcementDetails">View announcement details</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="dues" class="page-section">
+      <div class="page-head">
+        <div><span class="tag">FINANCE REPORT</span><p>Track homeowner association dues and payment status.</p></div>
+        <button class="primary-btn disabled-action">+ Record Payment</button>
+      </div>
+      <article class="panel">
+        <div class="filter-row">
+          <select><option>September 2026</option><option>August 2026</option></select>
+          <input type="text" placeholder="Search homeowner..." />
+          <button class="outline-btn disabled-action">Export</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Homeowner</th><th>Block / Lot</th><th>Amount</th><th>Status</th><th>Last Updated</th></tr></thead>
+            <tbody>
+              <tr><td>Maria Santos</td><td>B4 / L12</td><td>₱850</td><td><span class="pill paid">Paid</span></td><td>Sept. 5</td></tr>
+              <tr><td>Juan Dela Cruz</td><td>B2 / L08</td><td>₱850</td><td><span class="pill pending">Pending</span></td><td>—</td></tr>
+              <tr><td>Angela Reyes</td><td>B7 / L03</td><td>₱850</td><td><span class="pill paid">Paid</span></td><td>Sept. 3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section id="announcements" class="page-section">
+      <div class="page-head">
+        <div><span class="tag">WHAT`S NEW</span><p>Post notices and updates for the community.</p></div>
+        <button class="primary-btn disabled-action">+ Create Post</button>
+      </div>
+      <div class="announcement-grid">
+        <article class="panel announcement-card"><span class="date-badge">18<br><small>SEP</small></span><h3>Community clean-up drive</h3><p>Saturday, 7:00 AM at the clubhouse. Volunteers are welcome.</p><span class="muted">Published • Admin</span></article>
+        <article class="panel announcement-card"><span class="date-badge">15<br><small>SEP</small></span><h3>Gate access reminder</h3><p>Please keep your homeowner ID available when entering the village.</p><span class="muted">Published • Admin</span></article>
+        <article class="panel announcement-card draft"><span class="draft-label">DRAFT / WORK IN PROGRESS</span><h3>Upcoming HOA meeting</h3><p>Details for the next meeting are still being prepared.</p><button class="outline-btn disabled-action">Edit draft</button></article>
+      </div>
+    </section>
+
+    <section id="reports" class="page-section">
+      <div class="page-head">
+        <div><span class="tag">COMMUNITY MONITORING</span><p>Record maintenance concerns and community observations.</p></div>
+        <button class="primary-btn disabled-action">+ New Report</button>
+      </div>
+      <article class="panel">
+        <div class="report-card"><span class="report-icon">⚠</span><div><strong>Streetlight concern</strong><p>Block 4 • Submitted by Resident • 2 hours ago</p></div><span class="pill pending">Pending</span></div>
+        <div class="report-card"><span class="report-icon">▣</span><div><strong>Water leak near gate</strong><p>Block 2 • Submitted by Resident • Yesterday</p></div><span class="pill review">Under review</span></div>
+        <div class="report-card"><span class="report-icon">♢</span><div><strong>Garbage collection delay</strong><p>Block 5 • Submitted by Resident • Sept. 19</p></div><span class="pill pending">Pending</span></div>
+      </article>
+    </section>
+
+    <section id="incidents" class="page-section">
+      <div class="page-head">
+        <div><span class="tag">INCIDENT MANAGEMENT</span><p>Basic tracking area for incidents reported inside the village.</p></div>
+        <button class="primary-btn disabled-action">+ Log Incident</button>
+      </div>
+      <article class="panel incident-panel">
+        <div class="incident">
+          <div class="incident-type disturbance">DISTURBANCE</div>
+          <div><strong>Noise complaint</strong><p>Block 3 • Sept. 21, 10:30 PM</p></div>
+          <span class="pill review">For review</span>
+        </div>
+        <div class="incident">
+          <div class="incident-type damage">DAMAGE</div>
+          <div><strong>Damaged common-area fence</strong><p>Block 6 • Sept. 20</p></div>
+          <span class="pill resolved">Resolved</span>
+        </div>
+        <div class="empty-note">
+          <strong>More incident fields are coming.</strong>
+          <p>Photo uploads, witness information, follow-up history, and printable incident reports are intentionally not implemented in this prototype.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <span>Kensington 16, Lancaster, Navarro, General Trias, Cavite</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
